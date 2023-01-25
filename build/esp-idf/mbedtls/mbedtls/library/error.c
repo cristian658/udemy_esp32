@@ -1,1 +1,0 @@
-/Users/cquezada/workspaces/repositories/esp-idf/components/mbedtls/mbedtls/library/error.c
