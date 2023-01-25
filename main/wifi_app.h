@@ -2,16 +2,20 @@
  * wifi_app.h
  *
  *  Created on: Jan 24, 2023
- *      Author: cquezada
+ *  Author: cquezada
  */
 
 #ifndef MAIN_WIFI_APP_H_
 #define MAIN_WIFI_APP_H_
 
-#include "esp netif.h"
+#include "freertos/FreeRtos.h"
+#include "freertos/event_groups.h"
+#include "freertos/task.h"
+
+#include "esp_netif.h"
 
 #define WIFI_AP_SSID				"ESP32_AP" 			//AP  name
-#define WIFI_AP_PASWORD				"password"			//AP password
+#define WIFI_AP_PASSWORD			"password"			//AP password
 #define WIFI_AP_CHANNEL				1 					//AP channel
 #define WIFI_AP_SSID_HIDDEN			0 					//AP visibility
 #define WIFI_AP_MAX_CONNECTIONS		5 					//AP max clients
