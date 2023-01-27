@@ -14,6 +14,7 @@
 #include "esp_wifi.h"
 #include "lwip/netdb.h"
 
+#include "http_server.h"
 #include "rgb_led.h"
 #include "tasks_common.h"
 #include "wifi_app.h"
@@ -78,7 +79,6 @@ static void wifi_app_event_handler(void *arg, esp_event_base_t event_base, int32
 		{
 		case IP_EVENT_STA_GOT_IP:
 			ESP_LOGI(TAG, "IP_EVENT_STA_GOT_IP");
-			wifi_app_send_message(WIFI_APP_MSG_STA_CONNECTED_GOT_IP);
 			break;
 		}
 	}
@@ -184,7 +184,7 @@ static void wifi_app_task(void *pvParameters)
 			{
 				case WIFI_APP_MSG_START_HTTP_SERVER:
 					ESP_LOGI(TAG, "WIFI_APP_MSG_START_HTTP_SERVER");
-					//http_server_start();
+					http_server_start();
 					rgb_led_http_server_started();
 					break;
 				case WIFI_APP_MSG_CONNECTING_FROM_HTTP_SERVER:
@@ -216,6 +216,7 @@ void wifi_app_start(void)
 
 	// Start WiFi started LED
 	rgb_led_wifi_app_started();
+	vTaskDelay(1500 / portTICK_PERIOD_MS);
 
 	// Disable default WiFi logging messages
 	esp_log_level_set("wifi", ESP_LOG_NONE);

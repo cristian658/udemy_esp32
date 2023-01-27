@@ -24,6 +24,7 @@ typedef struct
 	int mode;
 	int timer_index;
 } ledc_info_t;
+//ledc_info_t ledc_ch[RGB_LED_CHANNEL_NUM];
 
 /**
  * Color to indicate WiFi application has started.

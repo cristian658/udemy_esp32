@@ -94,7 +94,7 @@ void rgb_led_wifi_app_started(void)
 		rgb_led_pwm_init();
 	}
 
-	rgb_led_set_color(255, 102, 255);// morado
+	rgb_led_set_color(255, 0, 0);// red
 }
 
 void rgb_led_http_server_started(void)
@@ -105,7 +105,7 @@ void rgb_led_http_server_started(void)
 		rgb_led_pwm_init();
 	}
 
-	rgb_led_set_color(204, 255, 150);//  verde claro
+	rgb_led_set_color(0, 0, 255);//  blue
 }
 
 
@@ -117,7 +117,7 @@ void rgb_led_wifi_connected(void)
 		rgb_led_pwm_init();
 	}
 
-	rgb_led_set_color(0, 255, 0);// verde
+	rgb_led_set_color(0, 255, 0);// green
 }
 
 
