@@ -6,10 +6,12 @@ var otaTimerVar =  null;
 
 /**
  * Initialize functions here.
+ const selectedFile = document.getElementById("selected_file");
  */
-$(document).ready(function(){
-	getUpdateStatus();
-});   
+
+document.addEventListener("DOMContentLoaded", function(){
+    getUpdateStatus();
+}); 
 
 /**
  * Gets file name and size for display on the web page.
