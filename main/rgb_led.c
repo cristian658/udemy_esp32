@@ -120,6 +120,17 @@ void rgb_led_wifi_connected(void)
 	rgb_led_set_color(0, 255, 0);// green
 }
 
+void rgb_led_wifi_disconnect(void)
+{
+	printf("rgb_led_http_server_started\n");
+	if (g_pwm_init_handle == false)
+	{
+		rgb_led_pwm_init();
+	}
+
+	rgb_led_set_color(0, 255, 255);//  blue
+}
+
 
 
 

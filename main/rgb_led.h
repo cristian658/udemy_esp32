@@ -41,5 +41,10 @@ void rgb_led_http_server_started(void);
  */
 void rgb_led_wifi_connected(void);
 
+/**
+ * Color to indicate that the ESP32 is disconnect to wifi.
+ */
+void rgb_led_wifi_disconnect(void);
+
 #endif /* MAIN_RGB_LED_H_ */
 

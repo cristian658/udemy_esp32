@@ -34,9 +34,14 @@ ready(function() {
   
   getUpdateStatus();
   startDHTSensorInterval();
+  getConnectInfo();
   document.getElementById("connect_wifi").addEventListener("click", function(){
   	checkCredentials();
   }); 
+  document.getElementById("disconnect_wifi").addEventListener("click", function(){
+  	disconnectWifi();
+  }); 
+  
 });
 
 /**
@@ -296,5 +301,60 @@ function showPassword()
 	{
 		x.type = "password";
 	}
+}
+
+/**
+ * Gets the connection information for displaying on the web page.
+ */
+function getConnectInfo()
+{
+	
+	fetch('/wifiConnectInfo.json')
+  		.then(response => response.json())
+	  	.then(data => {
+			document.getElementById('connected_ap_label').innerHTML = "Connected to: ";
+			document.getElementById('connected_ap').innerHTML = data["ap"];
+			
+			document.getElementById('ip_address_label').innerHTML = "IP Address: ";
+			document.getElementById('wifi_connect_ip').innerHTML = data["ip"];
+			
+			document.getElementById('netmask_label').innerHTML = "Netmask: ";
+			document.getElementById('wifi_connect_netmask').innerHTML = data["netmask"];
+			
+			document.getElementById('gateway_label').innerHTML = "Gateway: ";
+			document.getElementById('wifi_connect_gw').innerHTML = data["gw"];
+		
+			document.getElementById('disconnect_wifi').style.display = 'block';
+	  	})
+	  	.catch(error => {
+			  console.log(error);
+		});
+}
+
+/**
+ * Disconnects Wifi once the disconnect button is pressed and reloads the web page.
+ */
+function disconnectWifi()
+{
+	
+	let options = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+        },
+        cache: "no-cache",
+        body: JSON.stringify({timestamp: Date.now()})
+    }
+    
+	fetch('/wifiDisconnect.json', options)
+  		.then(response => response.json())
+	  	.then(data => {
+			  console.log(data);
+	  	})
+	  	.catch(error => {
+			  console.log(error);
+		});
+	// Update the web page
+	setTimeout("location.reload(true);", 2000);
 }
 
