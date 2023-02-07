@@ -2,6 +2,7 @@
 
 #include "wifi_app.h"
 #include  "DHT22.h"
+#include "wifi_reset_button.h"
 
 void app_main(void)
 {
@@ -16,6 +17,9 @@ void app_main(void)
 
 		// Start Wifi
 		wifi_app_start();
+
+		// Configure Wifi reset button
+		wifi_reset_button_config();
 
 		// Start DHT22 Sensor task
 		DHT22_task_start();
