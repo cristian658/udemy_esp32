@@ -117,6 +117,10 @@ input[type="button"]:active {
 	display: none;
 }
      
+#local_time {
+	display:inline;
+	color: #1d3557;
+}
 
 
 
