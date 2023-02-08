@@ -30,8 +30,7 @@ function ready(callbackFunc) {
  * Initialize functions here.
  */
 ready(function() {
-  // your code here 
-  
+  getSSID();
   getUpdateStatus();
   startDHTSensorInterval();
   startLocalTimeInterval();
@@ -385,4 +384,23 @@ function getLocalTime()
 		});
 	
 }
+
+/**
+ * Gets the ESP32's access point SSID for displaying on the web page.
+ */
+function getSSID()
+{
+	const apSSID = document.getElementById("ap_ssid");
+	fetch('/apSSID.json')
+  		.then(response => response.json())
+	  	.then(data => {
+			  apSSID.innerHTML = data["ssid"]
+			  console.log(data);
+	  	})
+	  	.catch(error => {
+			  console.log(error);
+		});
+	
+}
+
 

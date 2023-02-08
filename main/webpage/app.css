@@ -122,6 +122,11 @@ input[type="button"]:active {
 	color: #1d3557;
 }
 
+#ap_ssid {
+	display: inline;
+	color: #1d3557;
+}
+
 
 
 
