@@ -2419,6 +2419,21 @@
 			<location>/Users/cquezada/workspaces/esp-idf-4.4/esp-idf-v4.4.3/components/esp_ipc/src/esp_ipc_isr/esp_ipc_isr_routines.S</location>
 		</link>
 		<link>
+			<name>build/ide/esp_idf_components/examples/common_components/protocol_examples_common/addr_from_stdin.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/esp-idf-4.4/esp-idf-v4.4.3/examples/common_components/protocol_examples_common/addr_from_stdin.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/examples/common_components/protocol_examples_common/connect.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/esp-idf-4.4/esp-idf-v4.4.3/examples/common_components/protocol_examples_common/connect.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/examples/common_components/protocol_examples_common/stdin_out.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/esp-idf-4.4/esp-idf-v4.4.3/examples/common_components/protocol_examples_common/stdin_out.c</location>
+		</link>
+		<link>
 			<name>build/ide/esp_idf_components/fatfs/port/freertos/ffsystem.c</name>
 			<type>1</type>
 			<location>/Users/cquezada/workspaces/esp-idf-4.4/esp-idf-v4.4.3/components/fatfs/port/freertos/ffsystem.c</location>
@@ -2582,6 +2597,16 @@
 			<name>build/ide/esp_idf_components/heap/port/esp32/memory_layout.c</name>
 			<type>1</type>
 			<location>/Users/cquezada/workspaces/esp-idf-4.4/esp-idf-v4.4.3/components/heap/port/esp32/memory_layout.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/ibraries/common/posix_compat/clock_esp.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/repositories/esp-aws-iot/libraries/common/posix_compat/clock_esp.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/ibraries/common/posix_compat/semaphore.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/repositories/esp-aws-iot/libraries/common/posix_compat/semaphore.c</location>
 		</link>
 		<link>
 			<name>build/ide/esp_idf_components/lwip/apps/dhcpserver/dhcpserver.c</name>
@@ -3752,6 +3777,31 @@
 			<name>build/ide/esp_idf_components/expat/expat/expat/lib/xmltok_ns.c</name>
 			<type>1</type>
 			<location>/Users/cquezada/workspaces/esp-idf-4.4/esp-idf-v4.4.3/components/expat/expat/expat/lib/xmltok_ns.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/ibraries/backoffAlgorithm/backoffAlgorithm/source/backoff_algorithm.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/repositories/esp-aws-iot/libraries/backoffAlgorithm/backoffAlgorithm/source/backoff_algorithm.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/ibraries/coreMQTT/coreMQTT/source/core_mqtt.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/repositories/esp-aws-iot/libraries/coreMQTT/coreMQTT/source/core_mqtt.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/ibraries/coreMQTT/coreMQTT/source/core_mqtt_serializer.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/repositories/esp-aws-iot/libraries/coreMQTT/coreMQTT/source/core_mqtt_serializer.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/ibraries/coreMQTT/coreMQTT/source/core_mqtt_state.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/repositories/esp-aws-iot/libraries/coreMQTT/coreMQTT/source/core_mqtt_state.c</location>
+		</link>
+		<link>
+			<name>build/ide/esp_idf_components/ibraries/coreMQTT/port/network_transport/network_transport.c</name>
+			<type>1</type>
+			<location>/Users/cquezada/workspaces/repositories/esp-aws-iot/libraries/coreMQTT/port/network_transport/network_transport.c</location>
 		</link>
 		<link>
 			<name>build/ide/esp_idf_components/lwip/lwip/src/api/api_lib.c</name>
